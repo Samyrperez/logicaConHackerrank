@@ -43,7 +43,7 @@
         
         ?>
 
-<script src="./sumaArray.js"></script>
+<script src="./compareTriplets.js"></script>
 </body>
 </html>
 
