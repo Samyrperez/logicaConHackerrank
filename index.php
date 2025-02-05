@@ -43,7 +43,7 @@
         
         ?>
 
-<script src="./opcion2_compareTripleta.js"></script>
+<script src="./sumaArray.php"></script>
 </body>
 </html>
 
