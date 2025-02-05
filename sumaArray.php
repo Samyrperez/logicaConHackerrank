@@ -25,5 +25,4 @@ echo "<h1 style= 'color: blue;'>La cantidad de elementos del array son: $contado
 echo "<h1> Resultado: $resultado</h1>";
 
 
-
 ?>
