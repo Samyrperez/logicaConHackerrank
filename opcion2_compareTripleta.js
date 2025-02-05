@@ -22,32 +22,42 @@ document.addEventListener("DOMContentLoaded", function(){
     function compareTriplets(a, b) {
         const minRange = 1;
         const maxRange = 100;
+        
+        // Creo una variable para guardar los puntos del jugador
+        let scoreA = 0;
+        let scoreB = 0;
 
         for (let i = 0; i < a.length; i++){
             // Valido que los valores esten entre 1 y 100
             if (a[i] < minRange || a[i] > maxRange || b[i] < minRange || b[i] > maxRange){
                 throw new Error(`Los valores deben estar entre ${minRange} y ${maxRange}`); 
             }
-        }
 
-        // Creo una variable para guardar los puntos del jugador
-        let scoreA = 0;
-        let scoreB = 0;
-
-        for (let i = 0; i < a.length ; i++){
             if (a[i] > b[i]){
                 scoreA++;
-            } else if (a[i] < b[i]){
+                continue;
+            }  
+            
+            if (a[i] < b[i]){
                 scoreB++;
-            }
+                continue;
+            }            
         }
-        if (scoreA > scoreB) {
-            console.log(`El jugador Alice es el ganador con ${scoreA} puntos`)
-        } else if (scoreA < scoreB) {
-            console.log(`El jugador Bob es el mejor con ${scoreB} puntos`);
-        } else {
+
+        if (scoreA === scoreB){
             console.log(`El juego termino en empate`);
+            return [scoreA, scoreB];
         }
+
+        if (scoreA > scoreB){
+            console.log(`El jugador Alice es el ganador con ${scoreA} puntos`);
+            return [scoreA, scoreB];
+        }
+        
+        console.log(`El jugador Bob es el mejor con ${scoreB} puntos`);
+    
+
+        
 
         return [scoreA, scoreB];
         

@@ -43,7 +43,7 @@
         
         ?>
 
-<script src="./compareTriplets.js"></script>
+<script src="./opcion2_compareTripleta.js"></script>
 </body>
 </html>
 
